@@ -1,6 +1,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import guraImage from '@/assets/gura.png'
+import { inject } from '@vercel/analytics'
+
+// Initialize Vercel Analytics
+inject()
 
 // Set the date/time when Gura left (example: 2025-06-01T12:00:00Z)
 const goneSince = new Date('2025-04-30T15:00:00Z') // 2025-05-01T00:00:00+09:00 JST
