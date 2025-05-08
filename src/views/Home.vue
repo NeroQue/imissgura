@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import guraImage from '@/assets/gura.png'
-import { Analytics } from "@vercel/analytics/vue"
 
 // Set the date/time when Gura left (example: 2025-06-01T12:00:00Z)
 const goneSince: Date = new Date('2025-04-30T15:00:00Z') // 2025-05-01T00:00:00+09:00 JST
@@ -33,18 +32,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Analytics />
-  <router-view />
+  <div class="container">
+    <img :src="guraImage" alt="Gura Placeholder" class="gura-img" />
+    <h1>WE'LL MISS YOU GURA!!</h1>
+    <p class="timer">It's been <span v-html="timer"></span> since you've been gone</p>
+    <footer>
+      <small>
+        made by NeroQue<br />
+        Very heavily "inspired" by <a href="https://imissfauna.com" target="_blank">imissfauna.com</a>
+      </small>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
-:global(html), :global(body) {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #7fbbf3;
-  overflow: hidden;
-}
 .container {
   min-height: 100vh;
   display: flex;
@@ -84,4 +85,4 @@ footer a {
   color: #1565c0;
   text-decoration: underline;
 }
-</style>
+</style> 
