@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import guraImage from '@/assets/gura.png'
 import { Analytics } from "@vercel/analytics/vue"
 
 // Set the date/time when Gura left (example: 2025-06-01T12:00:00Z)
