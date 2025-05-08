@@ -38,7 +38,7 @@ onUnmounted(() => {
     <p class="timer">It's been <span v-html="timer"></span> since you've been gone</p>
     <footer>
       <small>
-        made by NeroQue<br />
+        made by <a href="https://github.com/NeroQue" target="_blank">NeroQue</a><br />
         Very heavily "inspired" by <a href="https://imissfauna.com" target="_blank">imissfauna.com</a>
       </small>
     </footer>
